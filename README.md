@@ -4,6 +4,6 @@
 
  // Social Media Dashboard
 
- // Brief Description of what you did. 
+ // created a social media dashboard in nextjs with a light and dark mode and responsivness with a frontend and backend for the api data
 
 // Peer Review
