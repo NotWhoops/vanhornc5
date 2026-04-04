@@ -6,6 +6,7 @@ import instagram from "@/public/assets/icon-twitter.svg";
 import youtube from "@/public/assets/icon-youtube.svg";
 import up from "@/public/assets/icon-up.svg";
 import down from "@/public/assets/icon-down.svg";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Home() {
   return (
@@ -20,13 +21,7 @@ export default function Home() {
           </div>
           <div className="text-gray-400 grid col-end-5">
             <div className="font-bold">Dark Mode</div>
-            <label
-              htmlFor="check"
-              className="flex bg-[#378fe6] bg-linear-to-r from-[#378fe6] to-[#3eda82] cursor-pointer relative w-20 h-10 rounded-full"
-            >
-              <input type="checkbox" id="check" className="sr-only peer" />
-              <span className="w-2/5 h-4/5 bg-black absolute rounded-full left-1 top-1 peer-checked:bg-white peer-checked:left-11 transition-all duration-500" />
-            </label>
+            <ThemeToggle />
           </div>
         </div>
       </div>
@@ -76,7 +71,7 @@ export default function Home() {
           />
           <p className="text-green-400">Today</p>
         </Card>
-        
+
         <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5]">
           <Image
             className=""
@@ -122,7 +117,130 @@ export default function Home() {
           />
           <p className="text-red-400">Today</p>
         </Card>
+
         <h1 className="text-gray-600">Overview - Today</h1>
+        <div className="grid grid-cols-3">
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Page Views</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={facebook}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">87</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={up}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">3%</p>
+          </Card>
+
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Retweets</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="twitter icon"
+              src={twitter}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">117</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={up}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">303%%</p>
+          </Card>
+
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Page Views</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={facebook}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">87</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={down}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">3%</p>
+          </Card>
+        </div>
+        <div className="grid grid-cols-3">
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Page Views</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={facebook}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">87</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={down}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">3%</p>
+          </Card>
+
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Page Views</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={facebook}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">87</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={down}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">3%</p>
+          </Card>
+
+          <Card className="max-w-sm !bg-gray-200 border-t-4 border-t-[#198ff5] items-center">
+            <p className="text-gray-400 font-bold">Page Views</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={facebook}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-2xl font-bold tracking-tight text-black">87</p>
+            <Image
+              className=""
+              loading="eager"
+              alt="facebook icon"
+              src={down}
+              style={{ maxWidth: "50%", height: "auto" }}
+            />
+            <p className="text-red-400">3%</p>
+          </Card>
+        </div>
       </div>
     </div>
   );

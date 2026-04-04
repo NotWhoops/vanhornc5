@@ -1,15 +1,39 @@
-'use client';
+"use client";
 
-import { Button } from "flowbite-react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export const ThemeToggle = () => {
-    // const (theme, setTheme) = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-    return (
-        <Button size="icon" className="rounded-full">
-            <div className="absolute h-10 w-10 rotate-0 scale-100 dark:-rotate-90 dark:scale-0"></div>
-            <div className="absolute h-10 w-10 rotate-90 scale-0 dark:-rotate-0 dark:scale- 100"></div>
-        </Button>
-    );
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isDark = theme === "dark";
+
+  return (
+    <label
+      htmlFor="check"
+      className="flex bg-[#378fe6] bg-linear-to-r from-[#378fe6] to-[#3eda82] cursor-pointer relative w-20 h-10 rounded-full"
+    >
+      <input
+        id="check"
+        type="checkbox"
+        className="sr-only peer"
+        checked={isDark}
+        onChange={() => setTheme(isDark ? "light" : "dark")}
+      />
+
+      <span
+        className={`
+          w-2/5 h-4/5 absolute rounded-full top-1 transition-all duration-500
+          ${isDark ? "left-11 bg-white" : "left-1 bg-black"}
+        `}
+      />
+    </label>
+  );
 };
